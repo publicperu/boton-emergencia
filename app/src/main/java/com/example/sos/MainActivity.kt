@@ -17,7 +17,7 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val boton = Button(this).apply {
-            text = "LLAMAR\nEMERGENCIA\n$NUMERO"
+            text = "LLAMADA DE\nEMERGENCIA\n$NUMERO"
             textSize = 30f
             setTextColor(Color.WHITE)
             setBackgroundColor(Color.RED)
