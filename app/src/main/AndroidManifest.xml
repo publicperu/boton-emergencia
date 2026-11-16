@@ -6,7 +6,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="SOS Emergencia"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
         <activity
             android:name=".MainActivity"
             android:exported="true">
