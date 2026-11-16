@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 
 class MainActivity : Activity() {
 
@@ -20,10 +21,11 @@ class MainActivity : Activity() {
         }
     }
 
-    private fun llamar() {
-        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$NUMERO")))
-        finish()
-    }
+  private fun llamar() {
+    Toast.makeText(this, "Llamando a Emergencia Hortifrut…", Toast.LENGTH_SHORT).show()
+    startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$NUMERO")))
+    finish()
+}
 
     override fun onRequestPermissionsResult(code: Int, perms: Array<out String>, results: IntArray) {
         super.onRequestPermissionsResult(code, perms, results)
