@@ -5,8 +5,8 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
-        android:label="SOS Emergencia"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:label="SOS Hortifrut"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:exported="true">
