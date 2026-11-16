@@ -29,7 +29,7 @@ class MainActivity : Activity() {
 
         val titulo = TextView(this).apply {
             text = "EMERGENCIA\nHORTIFRUT"
-            textSize = 60f
+            textSize = 50f
             typeface = Typeface.DEFAULT_BOLD
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
@@ -37,7 +37,7 @@ class MainActivity : Activity() {
 
         val subtitulo = TextView(this).apply {
             text = "Llamando..."
-            textSize = 25f
+            textSize = 28f
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
             setPadding(0, dp(12), 0, 0)
