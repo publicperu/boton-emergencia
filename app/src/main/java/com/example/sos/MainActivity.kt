@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
@@ -19,7 +18,7 @@ import android.widget.TextView
 
 class MainActivity : Activity() {
 
-    private val NUMERO = "105"
+    private val NUMERO = "989957003"
     private val RETRASO_MS = 1500L
 
     private fun dp(valor: Int): Int =
@@ -30,7 +29,7 @@ class MainActivity : Activity() {
 
         val titulo = TextView(this).apply {
             text = "EMERGENCIA\nHORTIFRUT"
-            textSize = 30f
+            textSize = 60f
             typeface = Typeface.DEFAULT_BOLD
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
@@ -38,7 +37,7 @@ class MainActivity : Activity() {
 
         val subtitulo = TextView(this).apply {
             text = "Llamando..."
-            textSize = 18f
+            textSize = 25f
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
             setPadding(0, dp(12), 0, 0)
@@ -56,8 +55,6 @@ class MainActivity : Activity() {
 
         val icono = ImageView(this).apply {
             setImageResource(R.drawable.icono_aviso)
-            // Convierte las líneas negras del icono en blancas
-            setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN)
             scaleType = ImageView.ScaleType.FIT_CENTER
             layoutParams = LinearLayout.LayoutParams(dp(140), dp(140)).apply {
                 bottomMargin = dp(48)
