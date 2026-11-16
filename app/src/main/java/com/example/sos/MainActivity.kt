@@ -25,7 +25,7 @@ class MainActivity : Activity() {
             text = "Llamando a\n$NOMBRE"
             textSize = 40f
             setTextColor(Color.WHITE)
-            setBackgroundColor(Color.parseColor("#E0505F"))
+            setBackgroundColor(Color.parseColor("#631E9C"))
             gravity = Gravity.CENTER
             setPadding(48, 48, 48, 48)
         }
