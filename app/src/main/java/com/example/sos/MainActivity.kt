@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
@@ -18,7 +19,7 @@ import android.widget.TextView
 
 class MainActivity : Activity() {
 
-    private val NUMERO = "989957003"
+    private val NUMERO = "105"
     private val RETRASO_MS = 1500L
 
     private fun dp(valor: Int): Int =
@@ -31,19 +32,18 @@ class MainActivity : Activity() {
             text = "EMERGENCIA\nHORTIFRUT"
             textSize = 30f
             typeface = Typeface.DEFAULT_BOLD
-            setTextColor(Color.parseColor("#9D1C06"))
+            setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
         }
 
         val subtitulo = TextView(this).apply {
             text = "Llamando..."
             textSize = 18f
-            setTextColor(Color.DKGRAY)
+            setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
             setPadding(0, dp(12), 0, 0)
         }
 
-        // Zona superior: los dos textos centrados en el espacio disponible
         val zonaTextos = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER
@@ -54,9 +54,10 @@ class MainActivity : Activity() {
             addView(subtitulo)
         }
 
-        // Icono en la parte baja
         val icono = ImageView(this).apply {
             setImageResource(R.drawable.icono_aviso)
+            // Convierte las líneas negras del icono en blancas
+            setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN)
             scaleType = ImageView.ScaleType.FIT_CENTER
             layoutParams = LinearLayout.LayoutParams(dp(140), dp(140)).apply {
                 bottomMargin = dp(48)
@@ -66,7 +67,7 @@ class MainActivity : Activity() {
         val raiz = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER_HORIZONTAL
-            setBackgroundColor(Color.WHITE)
+            setBackgroundColor(Color.parseColor("#B31E2D"))
             setPadding(dp(24), dp(24), dp(24), dp(24))
             addView(zonaTextos)
             addView(icono)
